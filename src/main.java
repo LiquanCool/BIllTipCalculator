@@ -9,8 +9,10 @@ public class main {
         System.out.println("How many people are splitting the bill?");
         int numberOfPeople = s.nextInt();
         double totalTip = ((double)((int)(totalBill*tipPercentage+0.5)))/100;//calculates the tip and rounds it normally
+        System.out.println(totalTip);
         double billAndTip = totalBill + totalTip;
-        double tipPerPerson = billAndTip/numberOfPeople+0.005;
+        double tipPerPerson = ((double)((int)((billAndTip/numberOfPeople+0.005)*100)))/100;//calculates the tip per person and rounds
+
 
     }
 }
