@@ -10,9 +10,14 @@ public class main {
         int numberOfPeople = s.nextInt();
         double totalTip = ((double)((int)(totalBill*tipPercentage+0.5)))/100;//calculates the tip and rounds it normally
         System.out.println(totalTip);
-        double billAndTip = totalBill + totalTip;
+        double billAndTip = ((double)((int)((totalTip+totalBill)*100)))/100;//calculates the total bill and tip and rounds
         double tipPerPerson = ((double)((int)((totalTip/numberOfPeople+0.005)*100)))/100;//calculates the tip per person and rounds
         double totalPerPerson = ((double)((int)((billAndTip/numberOfPeople+0.005)*100)))/100;//calculates total per person and rounds
-
+        System.out.println("____________________________________________");//prints out the results
+        System.out.println("Your total tip amount is " + totalTip);
+        System.out.println("Your bill including tip is " + billAndTip);
+        System.out.println("Your tip paid per person is " + tipPerPerson);
+        System.out.println("Your total amount paid per person is " + totalPerPerson);
+        System.out.println("____________________________________________");
     }
 }
