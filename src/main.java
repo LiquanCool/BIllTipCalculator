@@ -11,8 +11,8 @@ public class main {
         double totalTip = ((double)((int)(totalBill*tipPercentage+0.5)))/100;//calculates the tip and rounds it normally
         System.out.println(totalTip);
         double billAndTip = totalBill + totalTip;
-        double tipPerPerson = ((double)((int)((billAndTip/numberOfPeople+0.005)*100)))/100;//calculates the tip per person and rounds
-
+        double tipPerPerson = ((double)((int)((totalTip/numberOfPeople+0.005)*100)))/100;//calculates the tip per person and rounds
+        double totalPerPerson = ((double)((int)((billAndTip/numberOfPeople+0.005)*100)))/100;//calculates total per person and rounds
 
     }
 }
