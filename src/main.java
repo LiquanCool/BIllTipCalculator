@@ -8,6 +8,9 @@ public class main {
         int tipPercentage = s.nextInt();
         System.out.println("How many people are splitting the bill?");
         int numberOfPeople = s.nextInt();
-        
+        double totalTip = ((double)((int)(totalBill*tipPercentage+0.5)))/100;//calculates the tip and rounds it normally
+        double billAndTip = totalBill + totalTip;
+        double tipPerPerson = billAndTip/numberOfPeople+0.005;
+
     }
 }
